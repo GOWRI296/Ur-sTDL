@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    width: calc(100% - 20px);
+    max-width: 540px;
+    background: rgba(0, 0, 0, 0.866);
+    padding: 40px 30px 70px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 30px rgba(115, 0, 255, 0.795);
+}
+
+h2 {
+    color: orange;
+    font-size: 30px;
+    position: relative;
+    font-family: "Comic Sans MS";
+    margin-bottom: 20px;
+}
+
+.text-box h2 img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    margin-top: -20px;
+    border-radius: 30px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+}
+
+.row button {
+    width: calc(100% - 20px);
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 12px 8px;
+    margin-bottom: 10px;
+    background-color: orange;
+    color: whitesmoke;
+    border-radius: 30px;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8px;
+}
+
+ul li.checked {
+    background: rgba(172, 255, 47, 0.789);
+    color: #fff;
+}
+
+ul li.checked::before {
+    background: url(images/checked.png);
+    background-size: cover;
+}
+
+ul li span {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    margin-left: 8px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+    
+
+
+@media screen and (max-width: 600px) {
+    .text-box {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .row input,
+    .row button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
